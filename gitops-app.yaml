@@ -8,7 +8,7 @@ spec:
     kind: GitRepository
     name: project-repo
   interval: 1m
-  path: ./Project/manifests
+  path: ./Project
   prune: true
   validation: client
   targetNamespace: project
