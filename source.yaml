@@ -4,7 +4,7 @@ metadata:
   name: project-repo
   namespace: flux-system
 spec:
-  interval: 10m
+  interval: 1m
   url: https://github.com/tsa-dom/devops-with-kubernetes
   ref:
     branch: main
