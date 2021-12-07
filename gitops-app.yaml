@@ -11,3 +11,4 @@ spec:
   path: ./Project/manifests
   prune: true
   validation: client
+  targetNamespace: project
