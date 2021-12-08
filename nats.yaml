@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   name: nats
-  namespace: flux-system
+  namespace: project
 spec:
   interval: 1m
   url: https://nats-io.github.io/k8s/helm/charts/
@@ -23,4 +23,3 @@ spec:
         name: nats
         namespace: flux-system
       interval: 1m
-      targetNamespace: project
