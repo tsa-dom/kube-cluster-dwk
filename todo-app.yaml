@@ -6,9 +6,9 @@ metadata:
 spec:
   sourceRef:
     kind: GitRepository
-    name: project
+    name: project-repo
   interval: 1m
   path: ./Project
   prune: true
   validation: client
-
+  targetNamespace: project
