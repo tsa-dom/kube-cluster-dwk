@@ -11,4 +11,3 @@ spec:
   path: ./Project
   prune: true
   validation: client
-  targetNamespace: project

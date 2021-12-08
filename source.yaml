@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: project-repo
-  namespace: flux-system
+  namespace: project
 spec:
   interval: 1m
   url: https://github.com/tsa-dom/devops-with-kubernetes
