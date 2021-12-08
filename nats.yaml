@@ -14,10 +14,9 @@ metadata:
   namespace: flux-system
 spec:
   sourceRef:
-    kind: GitRepository
+    kind: HelmRepository
     name: nats
   interval: 1m
   prune: true
-  path: .
   validation: client
   targetNamespace: project
