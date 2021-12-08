@@ -1,0 +1,11 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: project
+  namespace: project
+spec:
+  interval: 1m
+  url: https://github.com/tsa-dom/devops-with-kubernetes
+  ref:
+    branch: main
+

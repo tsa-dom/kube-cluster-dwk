@@ -6,19 +6,9 @@ metadata:
 spec:
   sourceRef:
     kind: GitRepository
-    name: project-repo
+    name: project
   interval: 1m
   path: ./Project
   prune: true
   validation: client
----
-apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: GitRepository
-metadata:
-  name: project-repo
-  namespace: project
-spec:
-  interval: 1m
-  url: https://github.com/tsa-dom/devops-with-kubernetes
-  ref:
-    branch: main
+
