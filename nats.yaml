@@ -18,5 +18,6 @@ spec:
     name: nats
   interval: 1m
   prune: true
+  path: .
   validation: client
   targetNamespace: project
