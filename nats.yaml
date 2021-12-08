@@ -11,12 +11,12 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: nats
-  namespace: flux-system
+  namespace: project
 spec:
   interval: 1m
   chart:
     spec:
-      chart: nats
+      chart: nats/nats
       sourceRef:
         kind: HelmRepository
         name: nats
