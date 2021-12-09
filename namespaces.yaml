@@ -72,3 +72,40 @@ subjects:
   name: namespaces
   namespace: argo-rollouts
 
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: namespaces
+  name: prometheus
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: namespaces
+  name: namespaces
+  namespace: prometheus
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: namespaces
+  name: namespaces-reconciler
+  namespace: prometheus
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: gotk:prometheus:reconciler
+- kind: ServiceAccount
+  name: namespaces
+  namespace: prometheus
+
